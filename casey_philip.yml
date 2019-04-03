@@ -6,3 +6,12 @@
         msg: "Hello AWX! This is Casey and Philip!"
     - name: Run the command if the specified file does not exist.
       command: ls -al
+    - name: Deploy Hello World Application
+      copy:
+        src: ./hello_world_app/hello.sh
+        dest: /var/hello.sh
+        owner: root
+        group: root
+        mode: 0755
+    - name: Run the command if the specified file does not exist.
+      command: /var/hello.sh        
