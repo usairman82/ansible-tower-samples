@@ -1,0 +1,8 @@
+- name: Casey Philip Playbook
+  hosts: all
+  tasks:
+    - name: Print A Message
+      debug:
+        msg: "Hello AWX! This is Casey and Philip!"
+    - name: Run the command if the specified file does not exist.
+      command: ls -al
